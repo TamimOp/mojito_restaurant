@@ -19,11 +19,20 @@ const Art = () => {
         pin: true,
       },
     });
-    maskTimeline.to(".will-fade", {
-      opacity: 0,
-      stagger: 0.2,
-      ease: "power1.inOut",
-    });
+    maskTimeline
+      .to(".will-fade", {
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power1.inOut",
+      })
+      .to(".masked-img", {
+        scale: 1.3,
+        maskPosition: "center",
+        maskSize: "400%",
+        duration: 1,
+        ease: "power1.inOut",
+      })
+      .to("#masked-content", { opacity: 1, duration: 1, ease: "power1.inOut" });
   });
   return (
     <div id="art">
@@ -74,7 +83,9 @@ const Art = () => {
         <div className="masked-container">
           <h2 className="will-fade">Sip-Worthy Perfection</h2>
           <div id="masked-content">
-            <h3>Made with Craft, Poured with Passion</h3>
+            <h4 className="text-4xl 2xl:text-5xl">
+              Made with Craft, Poured with Passion
+            </h4>
             <p>
               This isn’t just a drink. It’s a carefully crafted moment made just
               for you.
