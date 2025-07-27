@@ -6,8 +6,6 @@ import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
-
-// Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
