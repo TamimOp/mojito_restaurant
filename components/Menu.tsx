@@ -121,7 +121,7 @@ const Menu = () => {
             src={currentCocktail.image}
             alt={currentCocktail.name}
             className="object-contain"
-            width={401.3939514160156}
+            width={538}
             height={592}
           />
         </div>
